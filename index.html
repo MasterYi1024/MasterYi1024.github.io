@@ -187,7 +187,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-04-18 15:54:10 / 修改时间：15:57:23" itemprop="dateCreated datePublished" datetime="2020-04-18T15:54:10+08:00">2020-04-18</time>
+              <time title="创建时间：2020-04-18 15:54:10 / 修改时间：16:18:50" itemprop="dateCreated datePublished" datetime="2020-04-18T15:54:10+08:00">2020-04-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -218,37 +218,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span><br><span class="line">deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial main restricted universe multiverse</span><br><span class="line">deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial-updates main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial-updates main restricted universe multiverse</span><br><span class="line">deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial-backports main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial-backports main restricted universe multiverse</span><br><span class="line">deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial-security main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line"># 预发布软件源，不建议启用</span><br><span class="line"># deb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial-proposed main restricted universe multiverse</span><br><span class="line"># deb-src https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; xenial-proposed main restricted universe multiverse</span><br></pre></td></tr></table></figure>
 
 <p>不同的版本源的链接不同，可以去清华大学开源软件镜像站获取自己版本的链接。</p>
-<h2 id="二、Anaconda换源"><a href="#二、Anaconda换源" class="headerlink" title="二、Anaconda换源"></a>二、Anaconda换源</h2><p>TUNA 提供了 Anaconda 仓库与第三方源（conda-forge、msys2、pytorch等，<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/" target="_blank" rel="noopener">查看完整列表</a>）的镜像，各系统都可以通过修改用户目录下的 <code>.condarc</code> 文件。</p>
-<p>注：由于更新过快难以同步，官方不同步<code>pytorch-nightly</code>, <code>pytorch-nightly-cpu</code>, <code>ignite-nightly</code>这三个包。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">channel_alias: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda</span><br><span class="line">default_channels:</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;main</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;free</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;r</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;pro</span><br><span class="line">  - https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  conda-forge: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  msys2: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  bioconda: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  menpo: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  pytorch: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br><span class="line">  simpleitk: https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;cloud</span><br></pre></td></tr></table></figure>
-
-<p>即可添加 Anaconda Python 免费仓库。</p>
-<p>运行 <code>conda clean -i</code> 清除索引缓存，保证用的是镜像站提供的索引。</p>
-<p>运行 <code>conda create -n myenv numpy</code> 测试一下吧。</p>
-<h2 id="三、pip换源"><a href="#三、pip换源" class="headerlink" title="三、pip换源"></a>三、pip换源</h2><h3 id="1-临时使用"><a href="#1-临时使用" class="headerlink" title="1.临时使用"></a>1.临时使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure>
-
-<p>注意，<code>sample</code>不能少，是<code>https</code>而不是<code>http</code></p>
-<h3 id="2-设为默认"><a href="#2-设为默认" class="headerlink" title="2.设为默认"></a>2.设为默认</h3><p>升级 pip 到最新的版本 (&gt;=10.0.0) 后进行配置：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pip install pip -U</span><br><span class="line">$ pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
-
-<p>如果你到pip默认源的网络连接较差，临时使用清华大学镜像站来升级pip：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U</span><br></pre></td></tr></table></figure>
-
-<h2 id="四、npm换源"><a href="#四、npm换源" class="headerlink" title="四、npm换源"></a>四、npm换源</h2><p>npm换源我之前是百度的结果，所以一直用的是百度到的淘宝的源。写这篇博客时，看见清华软件站也有，我没用过不知道是不是可用，为了保持整体性放上来。我感觉这个只是个Nodejs的下载源，因为下面的<code>n</code>是一个Nodejs的版本管理软件，第二条命令的意思是安装Nodejs的stable(稳定)版本。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设定环境变量</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> NODE_MIRROR=https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 然后正常使用 n 即可</span></span><br><span class="line"></span><br><span class="line">sudo n stable</span><br></pre></td></tr></table></figure>
-
-<p>下面是更换为淘宝源的方法：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>然后输入<code>npm config list</code>就可以看到是否已经换成了淘宝的源。</p>
-<h2 id="五、maven换源"><a href="#五、maven换源" class="headerlink" title="五、maven换源"></a>五、maven换源</h2><p>这个maven是我在遇到的一个东西，我不知道它是个什么东西，只知道它也可以换源:D</p>
-<p>在清华大学开源软件镜像站没找到maven，百度找到的教程大多说设置<code>~/.m2/setting.xml</code>，但是我没有这个文件，手动添加修改后也没有变化，后来我找到我的这个文件不在这个路径，而是在<code>/etc/maven/</code>目录下，你可以看一下你的在哪里，找到后修改，关于修改，网上说法也很多，我也试过，体验不怎么样，我说一下我的修改方法。关于这种方法要不要采用：你随意，我干了！</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /etc/maven	<span class="comment"># 切换目录</span></span><br><span class="line">$ sudo cp setting.xml setting.xml.backup	<span class="comment"># 备份</span></span><br><span class="line">$ sudo vim setting.xml	<span class="comment"># 查看编辑</span></span><br><span class="line"><span class="comment"># 找到&lt;mirrors&gt;...&lt;/mirrors&gt;</span></span><br><span class="line"><span class="comment"># 将中间内容修改为如下</span></span><br><span class="line">    &lt;mirror&gt;</span><br><span class="line">    &lt;id&gt;aliyunmaven&lt;/id&gt;</span><br><span class="line">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span><br><span class="line">    &lt;name&gt;aliyun maven&lt;/name&gt;</span><br><span class="line">    &lt;url&gt;https://maven.aliyun.com/repository/public &lt;/url&gt;</span><br><span class="line">    &lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
-
-<p>保存退出即可。</p>
-<p>以上就是我遇到过的可以换源的地方，可能还有一些其他的也可以换源，等我慢慢邂逅，慢慢遇见吧：）</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1].<a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="noopener">清华大学开源软件镜像站</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/18/Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E6%8D%A2%E6%BA%90/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -298,7 +275,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-18 15:52:29" itemprop="dateModified" datetime="2020-04-18T15:52:29+08:00">2020-04-18</time>
+                <time title="修改时间：2020-04-18 16:18:31" itemprop="dateModified" datetime="2020-04-18T16:18:31+08:00">2020-04-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -323,113 +300,14 @@
       
           <h1 id="kurento-OpenCV-module-on-Ubuntu"><a href="#kurento-OpenCV-module-on-Ubuntu" class="headerlink" title="kurento OpenCV module on Ubuntu"></a>kurento OpenCV module on Ubuntu</h1><p>前提：如果想要运行<code>kurento-magic-mirror</code>demo以及后续的<code>OpenCV module</code>需要ubuntu16.04版本，之前在18.04版本测试始终没有成功，如有同学测试18.04通过还请不吝赐教。</p>
 <p>这篇教程只是一个快速上手的指导，并没有严禁的学术解释，想要详细了解可以去看一下参考的两篇文章，如果想深入了解kurento，推荐<a href="https://doc-kurento.readthedocs.io/en/stable/" target="_blank" rel="noopener">kurento官方文档</a>。</p>
-<h2 id="一、kurento安装"><a href="#一、kurento安装" class="headerlink" title="一、kurento安装"></a>一、kurento安装</h2><p>在终端运行以下命令：</p>
-<h3 id="1-确保已安装GnuPG"><a href="#1-确保已安装GnuPG" class="headerlink" title="1.确保已安装GnuPG"></a>1.确保已安装GnuPG</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update &amp;&amp; sudo apt-get install --no-install-recommends --yes gnupg</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-定义你的Ubuntu版本"><a href="#2-定义你的Ubuntu版本" class="headerlink" title="2.定义你的Ubuntu版本"></a>2.定义你的Ubuntu版本</h3><p>下面两条命令只运行其中一条，根据自己Ubuntu版本确定</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ DISTRO=<span class="string">"xenial"</span> <span class="comment"># KMS for Ubuntu 16.04 (Xenial)</span></span><br><span class="line">$ DISTRO=<span class="string">"bionic"</span> <span class="comment"># KMS for Ubuntu 18.04 (Bionic)</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-添加kurento源"><a href="#3-添加kurento源" class="headerlink" title="3.添加kurento源"></a>3.添加kurento源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5AFA7A83</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo tee <span class="string">"/etc/apt/sources.list.d/kurento.list"</span> &gt;/dev/null &lt;&lt;EOF</span><br><span class="line"><span class="comment"># Kurento Media Server - Release packages</span></span><br><span class="line">deb [arch=amd64] http://ubuntu.openvidu.io/6.13.0 <span class="variable">$DISTRO</span> kms6</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-安装KMS："><a href="#4-安装KMS：" class="headerlink" title="4.安装KMS："></a>4.安装KMS：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update &amp;&amp; sudo apt-get install --yes kurento-media-server</span><br></pre></td></tr></table></figure>
-
-<p>这样就安装好了，测试一下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service kurento-media-server start</span><br></pre></td></tr></table></figure>
-
-<p>若未报错则确实安装成功。（因为我只在内网使用，所以有关STUN和TURN部分我没有配置）</p>
-<h2 id="二、kurento-magic-mirror-demo"><a href="#二、kurento-magic-mirror-demo" class="headerlink" title="二、kurento-magic-mirror demo"></a>二、kurento-magic-mirror demo</h2><p>这里我用的是Node.js的demo.</p>
-<h3 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.准备工作"></a>1.准备工作</h3><p>确保已安装了Node.js和Bower，kurento文档里用以下命令安装：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -</span><br><span class="line">$ sudo apt-get install -y nodejs</span><br><span class="line">$ sudo npm install -g bower</span><br></pre></td></tr></table></figure>
-
-<p>这里npm运行速度可能很慢，可以参考我的另一篇博客换一下源。</p>
-<h3 id="2-克隆demo到本地"><a href="#2-克隆demo到本地" class="headerlink" title="2.克隆demo到本地"></a>2.克隆demo到本地</h3><p>官方有基于Java, JavaScript, Node.js 三种demo，这里用的是Node.js的，其他两种也可以。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/Kurento/kurento-tutorial-node.git</span><br></pre></td></tr></table></figure>
-
-<p>如果从github clone速度很慢，可以考虑自行注册码云帐号，将以上项目放到自己的码云仓库后从码云clone。（具体步骤自行百度）</p>
-<h3 id="3-运行demo"><a href="#3-运行demo" class="headerlink" title="3.运行demo"></a>3.运行demo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> kurento-tutorial-node/kurento-magic-mirror</span><br><span class="line">$ git checkout 6.13.0</span><br><span class="line">$ npm install</span><br><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
-
-<p>如果一切正常，就可以打开这个网址<code>https://localhost:8443/</code>去查看效果了。</p>
-<p>这里我再写一点题外话：</p>
-<blockquote>
-<p>上面那个网址是https，而不是http，所以如果你打不开，可以检查一下是不是网址弄错了。</p>
-<p>还有另一个问题，如果你是在尝试其他的demo，例如One-To-One video call，你可能想自己是一下效果，这里我提示一下，你不需要在两台终端安装kurento并配置这么多东西，你只需在一台终端配置好之后，拿出手机，输入<code>https://&lt;你配好的终端的IP地址&gt;:8443/</code>就可以了。</p>
-</blockquote>
-<h2 id="三、搭建OpenCV-module"><a href="#三、搭建OpenCV-module" class="headerlink" title="三、搭建OpenCV module"></a>三、搭建OpenCV module</h2><p>以下工作可以看参考结合，参考比我解释的更详细。</p>
-<h3 id="1-准备工作-1"><a href="#1-准备工作-1" class="headerlink" title="1.准备工作"></a>1.准备工作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update &amp;&amp; sudo apt-get install --yes kurento-media-server-dev</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-搭建模块"><a href="#2-搭建模块" class="headerlink" title="2.搭建模块"></a>2.搭建模块</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ kurento-module-scaffold.sh &lt;module_name&gt; &lt;output_directory&gt; opencv_filter</span><br></pre></td></tr></table></figure>
-
-<p>其中<code>module_name</code>就是模块的名字，<code>output_directory</code>就是输出目录。kurento官方给了个<a href="https://github.com/Kurento/kms-opencv-plugin-sample" target="_blank" rel="noopener">例子</a>，例如上面这条命令可以这样：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ kurento-module-scaffold.sh OpencvPluginSample ./ opencv_filter</span><br></pre></td></tr></table></figure>
-
-<p>这样就会在<code>./</code>也就是当前目录下新建一个名为<code>opencv-plugin-sample</code>的目录。</p>
-<p>在<code>opencv-plugin-sample/src/server/interface</code>目录下，修改<code>opencvpluginsample.OpencvPluginSample.kmd.json</code>文件，仿照github<a href="https://github.com/Kurento/kms-opencv-plugin-sample/tree/master/src/server/interface" target="_blank" rel="noopener">示例</a>更改，添加<code>setFilterType</code>和<code>setEdgeThreshold</code>两个方法。</p>
-<p>接着进到<code>opencv-plugin-sample</code>目录，新建<code>build</code>文件夹后生成：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> opencv-plugin-sample	<span class="comment"># 进入目录</span></span><br><span class="line">$ mkdir build				<span class="comment"># 新建build</span></span><br><span class="line">$ <span class="built_in">cd</span> build					<span class="comment"># 进入build</span></span><br><span class="line">$ cmake ..					<span class="comment"># 生成模块</span></span><br></pre></td></tr></table></figure>
-
-<p>之后会在<code>src/server/implementation/object/</code>文件夹下生成以下四个文件：</p>
-<blockquote>
-<p>ModuleNameImpl.cpp<br>ModuleNameImpl.hpp<br>ModuleNameOpenCVImpl.cpp<br>ModuleNameOpenCVImpl.hpp</p>
-</blockquote>
-<p>其中<code>ModuleName</code>对应你的模块名字，之后基于该模块实现其他效果也是通过修改这几个文件。官方文档里是这么写的“The first two files should not be modified. The last two files will contain the logic of your module.”，意思前两个文件不能自己修改，后两个文件包含你的模块的逻辑。但是我自己去运行的时候发现前两个不改运行不出来，后面做到的时候我会仔细说的。</p>
-<h3 id="3-编译安装"><a href="#3-编译安装" class="headerlink" title="3.编译安装"></a>3.编译安装</h3><p>对照官方例子里的<a href="https://github.com/Kurento/kms-opencv-plugin-sample/tree/master/src/server/implementation/objects" target="_blank" rel="noopener">四个文件</a>修改本地的四个文件,注意官方意思是只改名字长的那两个。</p>
-<blockquote>
-<p> 这里说一下我的理解（千万注意，只是我的理解）：如果单纯搭建一个OpenCV模块，不需要更改，而且到上一步为止应该已经算是做好这个模块了，这一步是编译安装我们刚才做好的模块。至于更改这几个cpp和hpp文件，是要自定义该模块的功能，官方给出的例子是一个边缘检测的例子，如果你自己会OpenCV开发的话，你也可以自己定义该模块的功能。所以这里你可以先按照官方的意思只修改后两个文件，反正现在用不到它们，下面我还会再提到这个问题。</p>
-</blockquote>
-<p>改完之后继续在<code>build</code>目录下运行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cmake .. -DCMAKE_INSTALL_PREFIX=/usr &amp;&amp; make &amp;&amp; sudo make install</span><br></pre></td></tr></table></figure>
-
-<p>如果遇到错误类似这样</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ld: libkmsmeetrixkurentohelloworldinterface.a(MeetrixKurentoHelloWorldInternal.cpp.o): relocation R_X86_64_32 against `.rodata<span class="string">' can not be used when making a shared object; recompile with -fPIC</span></span><br><span class="line"><span class="string">libkmsmeetrixkurentohelloworldinterface.a: error adding symbols: Bad value</span></span><br></pre></td></tr></table></figure>
-
-<p>那就回到上一级目录，找到<code>CMakeList.txt</code>找到下面一行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span>(CMAKE_CXX_FLAGS <span class="string">"<span class="variable">$&#123;CMAKE_CXX_FLAGS&#125;</span> -g -DHAVE_CONFIG_H -Wall -Werror -std=c++11"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>改成：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span>(CMAKE_CXX_FLAGS <span class="string">"<span class="variable">$&#123;CMAKE_CXX_FLAGS&#125;</span> -g -fPIC -DHAVE_CONFIG_H -Wall -Werror -std=c++11"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>然后回到<code>build</code>目录再运行一次刚才的命令。</p>
-<h3 id="4-验证安装"><a href="#4-验证安装" class="headerlink" title="4.验证安装"></a>4.验证安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ kurento-media-server -v</span><br></pre></td></tr></table></figure>
-
-<p>输出类似：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Kurento Media Server version: 6.13.0</span><br><span class="line">Found modules:</span><br><span class="line">	<span class="string">'core'</span> version 6.13.0</span><br><span class="line">	<span class="string">'elements'</span> version 6.13.0</span><br><span class="line">	<span class="string">'filters'</span> version 6.13.0</span><br><span class="line">	<span class="string">'opencvpluginsample'</span> version 0.0.1~0.g9a49353	<span class="comment"># 这里是你的模块信息</span></span><br></pre></td></tr></table></figure>
-
-<p>如果一直没有输出也不要干等着，按<code>ctrl+c</code>组合键结束掉，然后重启一下KMS服务：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service kurento-media-server restart</span><br></pre></td></tr></table></figure>
-
-<h2 id="四、自定义OpenCV模块功能"><a href="#四、自定义OpenCV模块功能" class="headerlink" title="四、自定义OpenCV模块功能"></a>四、自定义OpenCV模块功能</h2><h3 id="1-生成客户端接口"><a href="#1-生成客户端接口" class="headerlink" title="1.生成客户端接口"></a>1.生成客户端接口</h3><p>kurento支持两种客户端接口：Java和JavaScript。这里我用JavaScript。在<code>build</code>目录下运行以下命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cmake .. -DGENERATE_JS_CLIENT_PROJECT=TRUE</span><br></pre></td></tr></table></figure>
-
-<p>之后会在<code>opencv-plugin-sample</code>目录创建一个新的<code>js</code>目录和一个<code>kurento-client-js</code>目录。</p>
-<h3 id="2-使用OpenCV模块"><a href="#2-使用OpenCV模块" class="headerlink" title="2.使用OpenCV模块"></a>2.使用OpenCV模块</h3><p>为了方便，我们直接使用<code>kurento tutotial</code>中的<code>kurento-magic-mirror</code>demo来改造我们的应用。改造之前确保该demo你可以实现。</p>
-<blockquote>
-<p> 提示一下，因为可以一次不成功，你可以考虑把这个demo的文件夹备份一份，万一失败删掉重来，就不需要重新<code>clone</code>了。</p>
-</blockquote>
-<p>假设你的<code>kurento-magic-mirror</code>这个demo保存在路径<code>/home/user/kurento-tutorial-node/kurento-magic-mirror</code>。在<code>opencv-plugin-sample</code>目录下执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cp -r js /home/user/kurento-tutorial-node/kurento-magic-mirror/node_modules/	<span class="comment"># 复制</span></span><br><span class="line">$ <span class="built_in">cd</span> /home/user/kurento-tutorial-node/kurento-magic-mirror/node_modules/		<span class="comment"># 切换目录</span></span><br><span class="line">$ mv js kurento-module-opencvpluginsample		<span class="comment"># 重命名</span></span><br><span class="line">$ <span class="built_in">cd</span> kurento-module-opencvpluginsample</span><br><span class="line">$ sudo npm install		<span class="comment"># 安装相关依赖</span></span><br></pre></td></tr></table></figure>
-
-<p>对<code>/home/user/kurento-tutorial-node/kurento-magic-mirror/server.js</code>文件做如下修改：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> kurento = <span class="built_in">require</span>(<span class="string">'kurento-client'</span>);</span><br><span class="line"><span class="keyword">var</span> fs    = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> https = <span class="built_in">require</span>(<span class="string">'https'</span>);</span><br><span class="line">kurento.register(<span class="string">'kurento-module-opencvpluginsample'</span>);		<span class="comment">// 增加这一行</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMediaElements</span>(<span class="params">pipeline, ws, callback</span>) </span>&#123;		<span class="comment">// 该函数有修改，请仔细对照</span></span><br><span class="line">    pipeline.create(<span class="string">'WebRtcEndpoint'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">error, webRtcEndpoint</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (error) &#123;</span><br><span class="line">            <span class="keyword">return</span> callback(error);</span><br><span class="line">        &#125;</span><br><span class="line">        pipeline.create(<span class="string">'OpencvPluginSample'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">error, faceOverlayFilter</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (error) &#123;</span><br><span class="line">                <span class="keyword">return</span> callback(error);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> callback(<span class="literal">null</span>, webRtcEndpoint, faceOverlayFilter);</span><br><span class="line">        &#125;); </span><br><span class="line">    &#125;); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>最后，在<code>kurento-magic-mirror</code>目录执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
-
-<p>然后再去<code>https://localhost:8443/</code>查看效果，可以看到经过该模块处理后的边缘检测效果。</p>
-<h3 id="3-遇到错误"><a href="#3-遇到错误" class="headerlink" title="3.遇到错误"></a>3.遇到错误</h3><p>如果你在<strong>第四步自定义OpenCV模块功能</strong>的过程中遇到类似下面这样的错误：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OpencvPluginSampleImpl.cpp:30:59: error: invalid new-expression of abstract class <span class="built_in">type</span>...</span><br></pre></td></tr></table></figure>
-
-<p>那有可能就是我之前提到过的没有更改前两个文件的问题，这里就是指<code>OpencvPluginSampleImpl.hpp</code>和<code>OpencvPluginSampleImpl.cpp</code>这两个文件。因为我们在后两个文件里添加了<code>setFilterType(int filterType)</code>和<code>setEdgeThreshold(int edgeValus)</code>两个函数，而对应的前两个文件并没有对应的虚函数实现，所以就报错了。解决办法就是去和<a href="https://github.com/Kurento/kms-opencv-plugin-sample/tree/master/src/server/implementation/objects" target="_blank" rel="noopener">github示例</a>对比前两个文件，添加缺少的代码即可。添加的代码类似：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setFilterType</span> <span class="params">(<span class="keyword">int</span> filterType)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setEdgeThreshold</span> <span class="params">(<span class="keyword">int</span> edgeValue)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<p>添加之后，</p>
-<p>就可以在回到你跌倒的地方，爬起来再来一次！</p>
-<p>应该就不会再出错了：）</p>
-<h2 id="参考（感谢）"><a href="#参考（感谢）" class="headerlink" title="参考（感谢）"></a>参考（感谢）</h2><p>[1].<a href="http://blog.sina.com.cn/s/blog_48c95a190102vyrt.html" target="_blank" rel="noopener">Kurento自定义OpenCV模块开发方法总结（二）</a></p>
-<p>[2].<a href="https://meetrix.io/blog/webrtc/kurento/creating-an-opencv-filter-for-kurento-media-server.html" target="_blank" rel="noopener">How to Create an OpenCV Filter for Kurento Media Server</a></p>
-<p>[3].Ubuntu16.04版本可用是经同学提醒</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/13/kurento-OpenCV-module-on-Ubuntu/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
